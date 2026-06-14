@@ -226,17 +226,26 @@ CAPTURE_CLIP_SECONDS = 15          # clip buffer around detection
 The goal is **understanding, not functionality**. Build just enough to make the idea undeniable to a room of community leaders.
 
 ### Must have
-- [ ] `dashboard/WebMap.tsx` — map of the territory with nodes shown as a web
-- [ ] `dashboard/MeshAnimation.tsx` — animated mini flag traveling from node to node to spider
-- [ ] `spider/routes/ingest.js` — receives a simulated mini flag
-- [ ] `spider/services/notifier.js` — fires a real WhatsApp message to one test number
-- [ ] Live event appearing on the map when the spider receives the flag
+- [x] `dashboard/WebMap.tsx` — map of the territory with nodes shown as a web
+- [x] `dashboard/MeshAnimation.tsx` — animated mini flag traveling from node to node to spider
+- [x] `spider/routes/ingest.js` — receives a simulated mini flag
+- [x] `spider/services/notifier.js` — sends via Twilio when credentials exist, otherwise shows a simulated WhatsApp/SMS log
+- [x] Live event appearing on the map when the spider receives the flag
 
 ### Nice to have
 - [ ] Simulate multiple nodes with different threat types
-- [ ] Show the flag hopping visually across 3-4 nodes before reaching spider
-- [ ] Display the WhatsApp message on screen during the demo
-- [ ] EcoProof integration slide
+- [x] Show the flag hopping visually across 3-4 nodes before reaching spider
+- [x] Display the WhatsApp message on screen during the demo
+- [x] EcoProof integration status strip
+
+### Local demo
+
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://127.0.0.1:5173` and click `Simulate detection`.
 
 ### Not needed
 - Real Meshtastic hardware
